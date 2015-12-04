@@ -7,16 +7,16 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_60">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_65">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/jse/JSP/설치파일/cos-26Dec2008/lib/cos.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HB02/Downloads/jstl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/HB02/Downloads/standard.jar"/>
-	<classpathentry kind="lib" path="C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/jse/json_simple-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/jse/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/jse/eclipse/새 폴더/cos.jar"/>
+	<classpathentry kind="lib" path="C:/jse/eclipse/새 폴더/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/jse/eclipse/새 폴더/json_simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/jse/eclipse/새 폴더/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/jse/eclipse/새 폴더/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/jse/eclipse/새 폴더/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

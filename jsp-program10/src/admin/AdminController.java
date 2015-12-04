@@ -36,6 +36,7 @@ public class AdminController extends HttpServlet {
 	JSONObject obj = new JSONObject();
 	List list = new ArrayList();
 	Gson gson = new Gson();
+	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
@@ -46,14 +47,19 @@ public class AdminController extends HttpServlet {
 			break;
 		case "header":
 			break;
+		case "search":
+			System.out.println("서치 케이스 진입");
+			break;
 		case "member_list":
 			System.out.println("회원목록 case 진입");
 			
 			list = service.getMemberList();
 			JsonElement element = gson.toJsonTree(list, new TypeToken<List>() {}.getType());
 			JsonArray memberList = element.getAsJsonArray();
+			System.out.println(memberList);
 			response.setContentType("application/json; charset=UTF-8");
 			response.getWriter().print(memberList);
+			
 			return;	
 		default:
 			break;

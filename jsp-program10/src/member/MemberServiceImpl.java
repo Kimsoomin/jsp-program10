@@ -53,6 +53,7 @@ public class MemberServiceImpl  implements MemberService{
 	// 전체 회원목록 
 	@Override
 	public List<MemberVO> getList() {
+		System.out.println("멤버 서비스 임플");
 		return dao.selectAll();
 	}
 }

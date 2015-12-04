@@ -15,11 +15,20 @@ public class MemberVO implements Serializable{
 	private String addr; // 주소
 	private String regdate; // 등록일
 	private String profile; // 프로필사진
+	private String age; // 프로필사진
 	public MemberVO() {}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
 
 	public MemberVO(String userid, String password, String name, 
 			String birth, String phone, String email,
-			String gender, String addr) {
+			String gender, String addr, String age) {
 		this.userid = userid;
 		this.password = password;
 		this.name = name;
@@ -29,6 +38,7 @@ public class MemberVO implements Serializable{
 		this.gender = gender;
 		this.addr = addr;
 		this.profile = "default.png";
+		this.age = age;
 	}
 
 	public String getUserid() {

@@ -32,6 +32,7 @@ public class MemberDAOImpl implements MemberDAO{
 				.getConnection();
 	}
 	public List<MemberVO> selectAll() {
+		System.out.println("멤버 다오");
 		List<MemberVO> list = new ArrayList<MemberVO>();
 		try {
 			stmt = con.createStatement(); // 쿼리를 실행하는 객체
@@ -45,8 +46,10 @@ public class MemberDAOImpl implements MemberDAO{
 				temp.setBirth(rs.getString("birth"));
 				temp.setGender(rs.getString("gender"));
 				temp.setPhone(rs.getString("phone"));
+				temp.setEmail(rs.getString("email"));
 				temp.setProfile(rs.getString("profile"));
 				temp.setRegdate(rs.getString("regdate"));
+				temp.setAge(rs.getString("age"));
 				list.add(temp);
 			}
 		} catch (SQLException e) {
@@ -59,8 +62,8 @@ public class MemberDAOImpl implements MemberDAO{
 		int result = 0;
 		try {
 			String sql = "insert into member("
-					+ "userid,password,name,birth,phone,email,gender,addr,profile,regdate"
-					+ ") values(?,?,?,?,?,?,?,?,?,sysdate)";
+					+ "userid,password,name,birth,phone,email,gender,addr,profile,regdate,age"
+					+ ") values(?,?,?,?,?,?,?,?,?,sysdate,?)";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, o.getUserid());
 			pstmt.setString(2, o.getPassword());
@@ -71,6 +74,7 @@ public class MemberDAOImpl implements MemberDAO{
 			pstmt.setString(7, o.getGender());
 			pstmt.setString(8, o.getAddr());
 			pstmt.setString(9, o.getProfile());
+			pstmt.setString(10, o.getAge());
 			
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
